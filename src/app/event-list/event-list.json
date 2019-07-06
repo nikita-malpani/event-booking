@@ -1,0 +1,123 @@
+[
+    {
+        "name": "SunBurn Goa 2019",
+        "picture":"./../assets/sunburn.jpeg",
+        "seats_available": 25,
+        "date_of_event":"2019-07-01"
+    },
+    {
+        "name": "Fresher Thoughts by Kunal Kamra",
+        "picture":"./../assets/fresher-thoughts.webp",
+        "seats_available": 10,
+        "date_of_event":"2019-08-04"
+    },
+    {
+        "name": "Midori With Pianist Ieva Jokubaviciute",
+        "picture":"./../assets/pianist.webp",
+        "seats_available": 10,
+        "date_of_event":"2019-09-29"
+    },
+    {
+        "name": "My Fair Lady Show",
+        "picture":"./../assets/fair-lady.webp",
+        "seats_available": 0,
+        "date_of_event":"2019-07-12"
+    },
+    {
+        "name": "Kem Chho Mumbai",
+        "picture":"./../assets/kem-chho.jpeg",
+        "seats_available": 3,
+        "date_of_event":"2019-07-06"
+    },
+    {
+        "name": "Raell Padamsee`s Ace - Speech and Drama",
+        "picture":"./../assets/raell-padamsees.jpg",
+        "seats_available": 40,
+        "date_of_event":"2019-08-17"
+    },
+    {
+        "name": "Atul Khatri - Live in South Mumbai",
+        "picture":"./../assets/atul-khatri.jpeg",
+        "seats_available": 5,
+        "date_of_event":"2019-07-14"
+    },
+    {
+        "name": "Nayii Udaan",
+        "picture":"./../assets/nayii-udaan.jpeg",
+        "seats_available": 4,
+        "date_of_event":"2019-08-01"
+    },
+    {
+        "name": "Bolava Vitthal (Sion) - An Evening of Abhangs",
+        "picture":"./../assets/bolava.jpeg",
+        "seats_available": 5,
+        "date_of_event":"2019-07-23"
+    },
+    {
+        "name": "Abhangwari by Mahesh Kale",
+        "picture":"./../assets/abhangwari-.jpeg",
+        "seats_available": 4,
+        "date_of_event":"2019-07-23"
+    },
+    {
+        "name": "Alka Yagnik - Live In Concert",
+        "picture":"./../assets/alka-yagnik.jpeg",
+        "seats_available": 10,
+        "date_of_event":"2019-08-03"
+    },
+    {
+        "name": "SOI@Prithvi: Classic Mondays",
+        "picture":"./../assets/classic.jpeg",
+        "seats_available": 0,
+        "date_of_event":"2019-07-12"
+    },
+    {
+        "name": "Sudhir Phadke Swar Rajani",
+        "picture":"./../assets/sudhir-phadke.jpeg",
+        "seats_available": 4,
+        "date_of_event":"2019-08-15"
+    },
+    {
+        "name": "Raju Srivastava Comedy Nite",
+        "picture":"./../assets/raju.jpeg",
+        "seats_available": 2,
+        "date_of_event":"2019-07-30"
+    },
+    {
+        "name": "Izhaar The International Poetry Festival",
+        "picture":"./../assets/izhaar.jpeg",
+        "seats_available": 1,
+        "date_of_event":"2019-07-26"
+    },
+    {
+        "name": "Dil Dhoondta Hai - Madan Mohan",
+        "picture":"./../assets/madan.jpeg",
+        "seats_available": 0,
+        "date_of_event":"2019-07-28"
+    },
+    {
+        "name": "Bas Kar Bassi Feat. Anubhav Singh Bassi",
+        "picture":"./../assets/bassi.jpeg",
+        "seats_available": 3,
+        "date_of_event":"2019-08-16"
+    },
+    {
+        "name": "Geeton Ka Karwan - Hits of Kalyanji Anandji",
+        "picture":"./../assets/geeton.jpeg",
+        "seats_available": 10,
+        "date_of_event":"2019-08-28"
+    },
+    {
+        "name": "Ben van den Dungen in Saxophone Colossus",
+        "picture":"./../assets/saxophone.webp",
+        "seats_available": 0,
+        "date_of_event":"2019-07-05"
+    },
+    {
+        "name": "Young Talent",
+        "picture":"./../assets/talent.webp",
+        "seats_available": 3,
+        "date_of_event":"2019-07-15"
+    }
+]
+

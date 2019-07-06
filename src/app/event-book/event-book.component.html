@@ -1,0 +1,98 @@
+<div class="container">
+    <h1>{{event?.name}}</h1>
+    <p>No of seats avaliable: {{event.seats_available}}</p>
+
+    <div *ngIf="!invalidForm">
+        <form [formGroup]="userDetails">
+            <ul class="flex-outer">
+                <li>
+                    <label class="label">User Name</label>
+                    <input type="text" formControlName="user_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && userDetails.controls.user_name.errors }"
+                    />
+                    <div *ngIf="submitted && userDetails.controls.user_name.errors" class="invalid-feedback">
+                        <div *ngIf="userDetails.controls.user_name.errors.required">Please enter your name</div>
+                        <div *ngIf="userDetails.controls.user_name.errors.pattern">Only letters and spaces are allowed
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <!-- Email -->
+                    <label class="label">Email Id</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && userDetails.controls.email.errors }"
+                    />
+                    <div *ngIf="submitted && userDetails.controls.email.errors" class="invalid-feedback">
+                        <div *ngIf="userDetails.controls.email.errors.required">Please enter your email</div>
+                        <div *ngIf="userDetails.controls.email.errors.pattern">Invalid email</div>
+                    </div>
+                </li>
+                <li>
+                    <!-- Phone Number -->
+                    <label class="label">Phone Number</label>
+                    <input type="text" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && userDetails.controls.phone.errors }"
+                    />
+                    <div *ngIf="submitted && userDetails.controls.phone.errors" class="invalid-feedback">
+                        <div *ngIf="userDetails.controls.phone.errors.pattern">Please enter 10 digit phone number</div>
+                    </div>
+                </li>
+                <li>
+                    <!-- Seats -->
+                    <label class="label">Number of Seats</label>
+                    <select formControlName="seats" class="form-control" [ngClass]="{ 'is-invalid': submitted && (userDetails.controls.seats.required || userDetails.controls.seats.notSelected) }"
+                        (change)="totSeats($event.target.value)">
+                        <option *ngFor="let value of [1,2,3,4,5,6];" value="{{value}}">{{value}}</option>
+                    </select>
+                    <div *ngIf="submitted && userDetails.controls.seats.errors" class="invalid-feedback">
+                        <div *ngIf="userDetails.controls.seats.errors.required">Please select number of seats</div>
+                        <div *ngIf="userDetails.controls.seats.errors.notSelected">Number of seats is more than available seats
+                        </div>
+                    </div>
+                </li>
+                <li formArrayName="attendee_names" *ngFor="let guest of userDetails.controls.attendee_names.controls; let i=index">
+                    <!-- name of guests -->
+                    <label class="label">Name of Attendee {{i+2}}</label>
+                    <input type="text" [formControl]="guest" class="form-control" [ngClass]="{ 'is-invalid': submitted && userDetails.controls.attendee_names.controls[i].errors }"
+                    />
+                    <div *ngIf="submitted && userDetails.controls.attendee_names.controls[i].errors" class="invalid-feedback">
+                        <div *ngIf="submitted && userDetails.controls.attendee_names.controls[i].errors.required">
+                            Please enter the name of Attendee {{i+2}}
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <button type="button" (click)="cancel()" [disabled]="invalidForm">Cancel</button>
+                    <button type="submit" (click)="onSubmit()" [disabled]="invalidForm">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+
+    <div *ngIf="invalidForm">
+
+        <ul class="flex-outer">
+            <li>
+                <label class="label">User Name</label>
+                <div>{{userDetails.controls.user_name.value}}</div>
+            </li>
+            <li>
+                <label class="label">Email Id</label>
+                <div>{{userDetails.controls.email.value}}</div>
+            </li>
+            <li>
+                <label class="label">Phone Number</label>
+                <div *ngIf="userDetails.controls.phone.value" class="display_left">{{userDetails.controls.phone.value}}</div>
+                <div *ngIf="!userDetails.controls.phone.value" class="display_left"><i>Not Provided</i></div>
+
+            </li>
+            <li *ngIf="userDetails.controls.attendee_names.controls.length > 0">
+                <label class="label">Name of Attendees</label>
+                <span *ngFor="let guest of userDetails.controls.attendee_names.controls;let i=index; let last=last">
+                    {{guest.value}} <span *ngIf="!last">, </span>
+                </span>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

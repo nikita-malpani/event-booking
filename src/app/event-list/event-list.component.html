@@ -1,0 +1,28 @@
+<div class="container">
+   <h1>WELCOME TO EVENT BOOKING</h1>
+<input type="text" placeholder="SEARCH EVENTS" (input)="searchEvent($event.target.value)"> 
+
+  <div class="table-row header">
+    <!-- <div class="text">Image</div> -->
+    <div class="text">Name</div>
+    <div class="num">Date of Event</div>
+    <div class="num">Seats</div>
+    <div class="num">Book</div>
+  </div>
+
+  <div class="table-row row" *ngFor="let e of eventList">
+    <div class="text">{{e.name}}</div>
+    <!-- <div class="text"> <img src="{{e.picture}}">  </div>       -->
+    <div class="num">{{e.date_of_event | date: 'dd-MM-yyyy'}}</div>
+    <div class="num">{{e.seats_available}}</div>
+    <div class="num">
+      <button *ngIf="e.seats_available > 0" type="button" (click)="bookEvent(e)">Book Now</button>
+      <span *ngIf="e.seats_available == 0"> <i> Sold Out </i> </span>
+    </div>
+  </div>
+
+  <div *ngIf="eventList.length ==0">
+    <i>No Results found </i>
+  </div>
+
+</div>
